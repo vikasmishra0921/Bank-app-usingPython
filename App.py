@@ -1,7 +1,7 @@
 import streamlit as st
-from Bank import Bank  # Assuming the class above is in bank.py
+from Bank import Bank  
 
-st.title("🏦 Welcome to Simple Bank System")
+st.title("Welcome to Simple Bank System")
 
 bank = Bank()
 
@@ -19,7 +19,7 @@ if choice == "Create Account":
         result = bank.create_account(name, age, email, pin)
         if "Account created successfully" in result:
             st.success(result)
-            st.subheader(f"Welcome, {name}! 🎉")
+            st.subheader(f"Welcome, {name}! ")
         else:
             st.error(result)
 
